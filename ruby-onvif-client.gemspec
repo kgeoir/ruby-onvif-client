@@ -2,8 +2,8 @@ Gem::Specification.new do |s|
     s.name        = 'ruby_onvif_client'
     s.version     = '0.1.6'
     s.date        = '2013-08-22'
-    s.summary     = "Ruby实现的onvif客户端"
-    s.description = "使用ruby实现的简单的onvif客户端"
+    s.summary     = "Ruby"
+    s.description = ""
     s.authors     = ["jimxl"]
     s.email       = 'tianxiaxl@gmail.com'
     s.require_paths = ['lib']

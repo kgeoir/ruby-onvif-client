@@ -1,4 +1,4 @@
-require "em-http"
+require "em-http-request"
 require "nokogiri"
 require "nori"
 
@@ -11,7 +11,7 @@ module ONVIF
         end
 
         def send data
-            puts "send data to #{@options} ", data 
+            puts "send data to #{@options} ", data
             http_options = {
                 connect_timeout: @options[:connect_timeout]
             }
@@ -19,7 +19,7 @@ module ONVIF
                 body: data
             }
             http = EventMachine::HttpRequest.new(
-                @options[:address], 
+                @options[:address],
                 http_options
             ).post(request_options)
             http.errback { yield false, {} }
